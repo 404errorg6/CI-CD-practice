@@ -44,7 +44,7 @@ func TestAuth(t *testing.T) {
 	for i, h := range headers {
 		got.apiKey, got.err = GetAPIKey(h)
 		if got.err == nil {
-			if got.apiKey == "This_is_correct_one" {
+			if got.apiKey != "This_is_correct_one" {
 				t.Fatalf("expectedApi: This_is_correct_one	expectedErr: nil\ngotApi: %v	gotErr:%v", got.apiKey, got.err)
 			}
 			continue
