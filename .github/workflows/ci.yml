@@ -26,6 +26,7 @@ jobs:
 
       - name: Run tests
         run: go test ./...
+
       - name: Output coverage
         run: go test ./... -cover
   
